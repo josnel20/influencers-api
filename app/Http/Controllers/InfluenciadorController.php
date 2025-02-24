@@ -11,7 +11,7 @@ class InfluenciadorController extends Controller
     public function index(Request $request)
     {
         try {
-            $influenciadores = $request->has('id') ? Influenciador::where('id', $request->id)->first() : Influenciador::paginate(10);
+            $influenciadores = Influenciador::with('campanhas')->paginate(10);
             if (! $influenciadores) {
                 return response()->json(['message' => 'Nenhum influenciador encontrado', 'level' => false, 'request' => $request->all()], 404);
             }
@@ -37,7 +37,7 @@ class InfluenciadorController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['message' => 'Erro ao se cadaastrar', 'level' => false, 'errors' => $validator->errors()], 422);
+            return response()->json(['message' => 'Erro ao se cadaastrar influenciador', 'level' => false, 'errors' => $validator->errors()], 422);
         }
 
         try {

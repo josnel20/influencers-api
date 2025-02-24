@@ -13,8 +13,12 @@ Route::prefix('v1')->group(function () {
     Route::middleware(['auth:api'])->prefix('sistema')->group(function () {
         Route::controller(App\Http\Controllers\InfluenciadorController::class)->prefix('influencer')->group(function () {
             Route::get('/', 'index');
-            Route::get('/{id}', 'show');
             Route::post('/criar', 'store');
+        });
+        Route::controller(App\Http\Controllers\CampanhasController::class)->prefix('campanhas')->group(function () {
+            Route::get('/', 'index');
+            Route::post('/criar', 'store');
+            Route::post('/vincular-influenciadores/{id}', 'mask');
         });
     });
 });

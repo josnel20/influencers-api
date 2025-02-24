@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "cd3a21b8-8db0-4650-98b1-2c9927997df4",
+		"name": "Influencers-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42554196"
+	},
+	"item": [
+		{
+			"name": "sistema",
+			"item": [
+				{
+					"name": "lista-ifluencers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTc0MDM1ODE3MywiZXhwIjoxNzQwMzYxNzczLCJuYmYiOjE3NDAzNTgxNzMsImp0aSI6IkVhNkpOMmhjaWFDN3lnQ2YiLCJzdWIiOiI3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sAoDt4U8RdqS6oEUoZqZAv0nqifH0OAj8Mp_7G5HoW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/sistema/influencer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sistema",
+								"influencer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista-campanhas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTc0MDM1OTQ5MCwiZXhwIjoxNzQwMzYzMDkwLCJuYmYiOjE3NDAzNTk0OTAsImp0aSI6IjhudTdxYnlwdlFEZXRkTWwiLCJzdWIiOiI3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.hngoLP6F7Wq4QlEcYUlZqc0HMw66p2ACYEZgTk6mWEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/sistema/campanhas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sistema",
+								"campanhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar-ifluencers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTc0MDM1OTA0NCwiZXhwIjoxNzQwMzYyNjQ0LCJuYmYiOjE3NDAzNTkwNDQsImp0aSI6IlZVbjdhd2h3aE9PZGNGTkEiLCJzdWIiOiI3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.K4C5yjYNqwEfQl4KBVtaand8ZLiKhvcsVqT5Cpi4UR4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"amelia pison\",\n    \"usuario_instagram\":\"amelia_pison\",\n    \"quantidade_seguidores\":3000,\n    \"categoria\":\"Tecnologia\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/sistema/influencer/criar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sistema",
+								"influencer",
+								"criar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cadastrar-campanha",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTc0MDM1NTczOCwiZXhwIjoxNzQwMzU5MzM4LCJuYmYiOjE3NDAzNTU3MzgsImp0aSI6ImlLMVNjTHpiUWxEQ0x3VWgiLCJzdWIiOiI3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.kd1WhU2eoaH9fhBcI50jcNG_xFoox7c6wJ0F3Z2ZVPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Campanha de Verão 4\",\n    \"orcamento\": 10000.50,\n    \"descricao\": \"Campanha promocional de verão\",\n    \"data_inicio\": \"2025-03-01\",\n    \"data_fim\": \"2025-03-31\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/sistema/campanhas/criar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sistema",
+								"campanhas",
+								"criar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vincular-influenciador",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0L2FwaS92MS9sb2dpbiIsImlhdCI6MTc0MDM1ODE3MywiZXhwIjoxNzQwMzYxNzczLCJuYmYiOjE3NDAzNTgxNzMsImp0aSI6IkVhNkpOMmhjaWFDN3lnQ2YiLCJzdWIiOiI3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.sAoDt4U8RdqS6oEUoZqZAv0nqifH0OAj8Mp_7G5HoW8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"influenciador_ids\": [1]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/v1/sistema/campanhas/vincular-influenciadores/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"v1",
+								"sistema",
+								"campanhas",
+								"vincular-influenciadores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ameli@teste.com\",\n    \"password\": \"senha123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrar usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Amelia\",\n    \"email\": \"ameli@teste.com\",\n    \"password\": \"senha123\",\n    \"password_confirmation\": \"senha123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/v1/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
